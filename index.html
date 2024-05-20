@@ -10,13 +10,32 @@
     <p id="description">This is a simple form built with html and css.</p>
     <form id="survey-form" meathod="post" action="">
       <fieldset>
-        <label for="name">Name <input id="name" type="text" name="name" required /></label>
-        <label for="email">email <input id="email" type="email" name="email" required /></label>
+        <label id="name-label" for="name">Name <input id="name" type="text" name="name" placeholder="Enter your name." required /></label>
+        <label id="email-label" for="email">email <input id="email" type="email" name="email" placeholder="enter your email." required /></label>
+        <label id="number-label" for="number">Age <input id="number" type="number" name="age" min="21" max="150" placeholder="enter your age" />
+        <label id="dropdown-label" for="dropdown">Why are you reading this? 
+          <select id="dropdown">
+            <option>Because I am learning.</option>
+            <option>Because I am evaluating.</option>
+          </select>
+        </label>
       </fieldset>
       <fieldset>
+        <legend>Did you like the portfolio?</legend>
+        <label for="radio-one"><input value="1" id="radio-one" type="radio" name="radio-button" checked />Yes.</label>
+        <label for="radio-two"><input value="2" id="radio-two" type="radio" name="radio-button" />No.</label>
       </fieldset>
       <fieldset>
+        <legend>What did you enjoy most about Adam's Portfolio website?</legend>
+        <label for="checkbox-one"><input value="3" id="checkbox-one" type="checkbox" name="checkbox-one" />Project 1</label>
+        <label for="checkbox-two"><input value="4" id="checkbox-two" type="checkbox" name="checkbox-two" />Project 2</label>
       </fieldset>
+      <fieldset>
+        <label for="notes">Additional Comments?
+          <textarea id="notes" name="notes" rows="3" cols="30" placeholder="Any additional notes."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
     </form>
   </body>
 </html>
